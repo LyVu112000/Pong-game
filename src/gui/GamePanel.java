@@ -15,6 +15,7 @@ public class GamePanel extends JPanel implements Runnable {
     static final int GAME_WIDTH = 1000;
     static final int GAME_HEIGHT = (int)(GAME_WIDTH * (0.55555));
     static final Dimension SCREEN_SIZE = new Dimension(GAME_WIDTH, GAME_HEIGHT);
+    static final int BALL_DIAMETER = 20;
     static final int PADDLE_WIDTH = 25;
     static final int PADDLE_HEIGHT = 100;
     Thread gameThread;
@@ -39,6 +40,7 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void createNewBall() {
+        ball = new Ball((GAME_WIDTH / 2) - (BALL_DIAMETER / 2), (GAME_HEIGHT / 2) - (BALL_DIAMETER / 2), BALL_DIAMETER, BALL_DIAMETER);
     }
 
     public void createNewPaddle() {
@@ -56,11 +58,13 @@ public class GamePanel extends JPanel implements Runnable {
     public void draw(Graphics graphics) {
         paddle1.draw(graphics);
         paddle2.draw(graphics);
+        ball.draw(graphics);
     }
 
     public void move() {
         paddle1.move();
         paddle2.move();
+        ball.move();
     }
 
     public void run() {
