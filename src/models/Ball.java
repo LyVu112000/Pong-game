@@ -6,19 +6,20 @@ import java.util.Random;
 public class Ball extends Rectangle {
 
     Random random;
-    int xVelocity;
-    int yVelocity;
+    public int xVelocity;
+    public int yVelocity;
+    int initialSpeed = 3;
 
     public Ball(int x, int y, int BALL_WIDTH, int BALL_HEIGHT) {
         super(x, y, BALL_WIDTH, BALL_HEIGHT);
         random = new Random();
         int xRandomDirection = random.nextInt(2);
         if (xRandomDirection == 0) xRandomDirection--;
-        setXDirection(xRandomDirection);
+        setXDirection(xRandomDirection * initialSpeed);
 
         int yRandomDirection = random.nextInt(2);
         if (yRandomDirection == 0) yRandomDirection--;
-        setYDirection(yRandomDirection);
+        setYDirection(yRandomDirection * initialSpeed);
     }
 
     public void setYDirection(int randomYDirection) {
