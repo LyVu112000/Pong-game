@@ -3,6 +3,11 @@ package gui;
 import javax.swing.*;
 import java.awt.*;
 
+/* Name: 14
+ Ly Hoang Vu-ITITIU18260, Bui Trung Kien-ITITIU18201
+ Purpose: Pong game - Algorithm and data structures course
+*/
+
 public class GameFrame extends JFrame {
 
     GamePanel panel;

@@ -3,6 +3,11 @@ package models;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
+/* Name: 14
+ Ly Hoang Vu-ITITIU18260, Bui Trung Kien-ITITIU18201
+ Purpose: Pong game - Algorithm and data structures course
+*/
+
 public class Paddle extends Rectangle{
 
     int id;

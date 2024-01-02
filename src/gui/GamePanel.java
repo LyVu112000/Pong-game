@@ -10,6 +10,11 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.Random;
 
+/* Name: 14
+ Ly Hoang Vu-ITITIU18260, Bui Trung Kien-ITITIU18201
+ Purpose: Pong game - Algorithm and data structures course
+*/
+
 public class GamePanel extends JPanel implements Runnable {
 
     static final int GAME_WIDTH = 1000;
